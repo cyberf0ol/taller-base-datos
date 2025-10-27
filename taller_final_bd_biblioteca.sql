@@ -1,9 +1,4 @@
--- Taller Final: Diseño e Implementación de Base de Datos
--- Escenario: Biblioteca (versión simplificada)
 
--- ================================
--- 1. CREACIÓN DE TABLAS
--- ================================
 CREATE TABLE Autor (
   id_autor SERIAL PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL
@@ -30,9 +25,7 @@ CREATE TABLE Prestamo (
   fecha_devolucion DATE
 );
 
--- ================================
--- 2. DATOS DE EJEMPLO
--- ================================
+
 INSERT INTO Autor(nombre) VALUES
 ('Gabriel García Márquez'),
 ('Isabel Allende'),
@@ -51,9 +44,7 @@ INSERT INTO Prestamo(id_libro, id_socio, fecha_prestamo, fecha_devolucion) VALUE
 (1, 1, '2025-10-01', '2025-10-10'),
 (2, 2, '2025-10-15', NULL);
 
--- ================================
--- 3. CONSULTAS COMPLEJAS
--- ================================
+
 
 -- 1. Mostrar los libros prestados y a quién
 SELECT L.titulo, S.nombre AS socio, P.fecha_prestamo, P.fecha_devolucion
